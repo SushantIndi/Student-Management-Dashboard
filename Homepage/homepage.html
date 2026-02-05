@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jspiders Dashboard</title>
+    <link rel="stylesheet" href="../Homepage/homepage.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Jspiders Training Dashboard</h1>
+        <div class="status">
+            <span>Total:<b id="total">0</b></span>
+            <span>Placed:<b id="placed">0</b></span>
+            <span>In Training:<b id="pending">0</b></span>
+        </div>
+    </header>
+
+    <div id="container">
+
+        <!-- Add Student -->
+        <div class="courses">
+            <input type="text" placeholder="Enter the Student Name..." id="nameInput">
+            <input type="date" id="join">
+            <select id="courses">
+                <option value="">Java Full-Stack</option>
+                <option value="">MERN</option>
+                <option value="">DevOps</option>
+            </select>
+            <select id="batch">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+            </select>
+            <button onclick="addStudent()">Add</button>
+        </div>
+        <!-- Filter Buttons -->
+        <div id="sort-buttons">
+            <div>
+                <button class="active" onclick="setFilter('all',this)">All</button>
+                <button onclick="setFilter('completed',this)">Completed</button>
+                <button onclick="setFilter('pending',this)">Pending</button>
+            </div>
+            <div id="search">
+                <!-- Search moved to header -->
+                <input type="text" placeholder="Search student..." id="header-search"
+                    oninput="search=this.value;render()">
+                <!-- Sort -->
+                <div id="sort">
+                    <select onchange="sort=this.value;render()">
+                        <option value="">Sort</option>
+                        <option value="course">Course</option>
+                        <option value="join">Joining</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student List -->
+        <div id="list">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student Name</th>
+                        <th>Joining Date</th>
+                        <th>Course</th>
+                        <th>Batch Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Clear -->
+        <div id="clear">
+            <button onclick="clearData()">Clear Data</button>
+        </div>
+
+    </div>
+
+    <script src="../Homepage/homepage.js"></script>
+</body>
+
+</html>

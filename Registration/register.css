@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle at center, #3a506bcd, #1c2541e3, #0b132b);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eaeaea;
+}
+body>h1{
+    position: absolute;
+    top: 20px;
+    left: 630px;
+}
+#main{
+    position: absolute;
+    top: 120px;
+    left: 450px;
+}
+#main>#sub-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+#main>#sub-main>#image>img{
+    height: 520px;
+    width: 300px;
+    display: block;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+form{
+    height: 520px;
+    width: 350px;
+    background-color: rgba(28, 37, 65, 0.85);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+form>div{
+    display: grid;
+    gap: 6px;
+}
+form>div>#one1{
+    margin-top: 12px;
+}
+form>div>.one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    font-size: medium;
+    color: #ff9b9b;
+}
+form>div>div>label{
+    font-size: larger;
+    color: #bfe2ff;
+}
+form>div>div>input{
+    background-color: #3a506b;
+    height: 35px;
+    width: 300px;
+    font-size: larger;
+    border: none;
+    border-radius: 6px;
+    padding-left: 10px;
+    color: #ffffff;
+}
+form>div>div>input::placeholder{
+    color: #d0d7e2;
+}
+form>div>div>input:focus{
+    outline: none;
+    box-shadow: 0 0 6px #bfe2ff;
+}
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#button>button{
+    padding: 7px 16px;
+    margin: 10px;
+    background-color: #3a506b;
+    color: #ffffff;
+    border: 2px black solid;
+    border-radius: 6px;
+    font-size: medium;
+    cursor: pointer;
+}
+#button>button:hover{
+    background-color: #5c7aa1;
+}
+#login{
+    font-size: large;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login a{
+    color: #bfe2ff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+#login a:hover{
+    text-decoration: underline;
+}
