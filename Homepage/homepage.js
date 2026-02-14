@@ -1,10 +1,8 @@
-// ---------- STATE ----------
 let students = JSON.parse(localStorage.getItem("Jspiders")) || [];
 let filter = "all";
 let sort = "";
 let search = "";
 
-// ---------- ELEMENTS ----------
 const nameInput = document.getElementById("nameInput");
 const joinInput = document.getElementById("join");
 const courseSelect = document.getElementById("courses");
@@ -16,17 +14,14 @@ const pendingEl = document.getElementById("pending");
 
 const tableBody = document.querySelector("#studentTable tbody");
 
-// ---------- SAVE ----------
 function save() {
   localStorage.setItem("Jspiders", JSON.stringify(students));
 }
 
-// ---------- ENTER KEY ----------
 nameInput.addEventListener("keypress", e => {
   if (e.key === "Enter") addStudent();
 });
 
-// ---------- ADD ----------
 function addStudent() {
   if (!nameInput.value.trim()) return;
 
@@ -46,29 +41,24 @@ function addStudent() {
   render();
 }
 
-// ---------- STATS ----------
 function updateStats() {
   totalEl.textContent = students.length;
   placedEl.textContent = students.filter(s => s.placed).length;
   pendingEl.textContent = students.filter(s => !s.placed).length;
 }
 
-// ---------- RENDER ----------
 function render() {
   let data = [...students];
 
-  // Filter
   if (filter === "completed") data = data.filter(s => s.placed);
   if (filter === "pending") data = data.filter(s => !s.placed);
 
-  // Search
   if (search) {
     data = data.filter(s =>
       s.name.toLowerCase().includes(search.toLowerCase())
     );
   }
 
-  // Sort
   if (sort === "course") {
     data.sort((a, b) => a.course.localeCompare(b.course));
   }
@@ -110,8 +100,6 @@ function render() {
 
   updateStats();
 }
-
-// ---------- TOGGLE ----------
 function toggle(id) {
   students = students.map(s =>
     s.id === id ? { ...s, placed: !s.placed } : s
@@ -120,7 +108,6 @@ function toggle(id) {
   render();
 }
 
-// ---------- FILTER ----------
 function setFilter(f, btn) {
   filter = f;
   document
@@ -130,7 +117,6 @@ function setFilter(f, btn) {
   render();
 }
 
-// ---------- CLEAR ----------
 function clearData() {
   if (confirm("Clear all data?")) {
     students = [];
@@ -139,5 +125,4 @@ function clearData() {
   }
 }
 
-// ---------- INIT ----------
 render();

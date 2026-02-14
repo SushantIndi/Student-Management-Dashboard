@@ -20,8 +20,6 @@
     </header>
 
     <div id="container">
-
-        <!-- Add Student -->
         <div class="courses">
             <input type="text" placeholder="Enter the Student Name..." id="nameInput">
             <input type="date" id="join">
@@ -37,7 +35,6 @@
             </select>
             <button onclick="addStudent()">Add</button>
         </div>
-        <!-- Filter Buttons -->
         <div id="sort-buttons">
             <div>
                 <button class="active" onclick="setFilter('all',this)">All</button>
@@ -45,10 +42,8 @@
                 <button onclick="setFilter('pending',this)">Pending</button>
             </div>
             <div id="search">
-                <!-- Search moved to header -->
                 <input type="text" placeholder="Search student..." id="header-search"
                     oninput="search=this.value;render()">
-                <!-- Sort -->
                 <div id="sort">
                     <select onchange="sort=this.value;render()">
                         <option value="">Sort</option>
@@ -59,7 +54,6 @@
             </div>
         </div>
 
-        <!-- Student List -->
         <div id="list">
             <table id="studentTable">
                 <thead>
@@ -78,7 +72,6 @@
             </table>
         </div>
 
-        <!-- Clear -->
         <div id="clear">
             <button onclick="clearData()">Clear Data</button>
         </div>
