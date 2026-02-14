@@ -4,21 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jspiders Dashboard</title>
+    <title>Student Dashboard</title>
     <link rel="stylesheet" href="../Homepage/homepage.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Jspiders Training Dashboard</h1>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">StudentDash</span>
+            <span class="divider"></span>
+            <span class="page-title">Training Dashboard</span>
+        </div>
+
         <div class="status">
-            <span>Total:<b id="total">0</b></span>
-            <span>Placed:<b id="placed">0</b></span>
-            <span>In Training:<b id="pending">0</b></span>
+            <span>Total: <b id="total">0</b></span>
+            <span>Placed: <b id="placed">0</b></span>
+            <span>In Training: <b id="pending">0</b></span>
+        </div>
+
+        <div class="nav-right">
+            <button class="logout-btn" onclick="location.href='../Login/login.html'">
+                Logout
+            </button>
         </div>
     </header>
 
+    <!-- Main Content -->
     <div id="container">
         <div class="courses">
             <input type="text" placeholder="Enter the Student Name..." id="nameInput">
@@ -35,15 +48,18 @@
             </select>
             <button onclick="addStudent()">Add</button>
         </div>
+
         <div id="sort-buttons">
             <div>
                 <button class="active" onclick="setFilter('all',this)">All</button>
                 <button onclick="setFilter('completed',this)">Completed</button>
                 <button onclick="setFilter('pending',this)">Pending</button>
             </div>
+
             <div id="search">
                 <input type="text" placeholder="Search student..." id="header-search"
                     oninput="search=this.value;render()">
+
                 <div id="sort">
                     <select onchange="sort=this.value;render()">
                         <option value="">Sort</option>
@@ -67,7 +83,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
         </div>
@@ -75,7 +90,6 @@
         <div id="clear">
             <button onclick="clearData()">Clear Data</button>
         </div>
-
     </div>
 
     <script src="../Homepage/homepage.js"></script>

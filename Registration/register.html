@@ -4,79 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="../Registration/register.css">
 </head>
 
 <body>
-    <h1>Registration Form</h1>
-    <div id="main">
-        <div id="sub-main">
-            <div id="image">
-                <img src="" alt="">
-            </div>
-            <div id="form">
-                <form action="">
-                    <div>
-                        <div id="one1" class="one">
-                            <label for="">Username</label>
-                            <span id="uerror" class="error"></span>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter the username....." id="user">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one">
-                            <label for="">Password</label>
-                            <span id="perror" class="error"></span>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter the password....." id="pass">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one">
-                            <label for="">Confirm Password</label>
-                            <span id="cperror" class="error"></span>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter confirm-password....." id="cpass">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one">
-                            <label for="">E-mail</label>
-                            <span id="merror" class="error"></span>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter the e-mail....." id="mail">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one">
-                            <label for="">Mobile number</label>
-                            <span id="nerror" class="error"></span>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Enter the mobile number....." id="num">
-                        </div>
-                    </div>
-                    <div id="button">
-                        <button>Register</button>
-                        <button>Cancel</button>
-                    </div>
-                    <div id="login">
-                        <p>Already Account Exsists?<a href="../Login/login.html">Login</a></p>
-                    </div>
-                </form>
-            </div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">StudentDash</span>
         </div>
+
+        <div class="nav-right">
+            <a href="../Login/login.html" class="nav-btn">Login</a>
+        </div>
+    </header>
+    <div class="main-container">
+        <form>
+            <h1>Registration Form</h1>
+
+            <div>
+                <label>Username</label>
+                <span id="uerror" class="error"></span>
+                <input type="text" placeholder="Enter the username..." id="user">
+            </div>
+
+            <div>
+                <label>Password</label>
+                <span id="perror" class="error"></span>
+                <input type="text" placeholder="Enter the password..." id="pass">
+            </div>
+
+            <div>
+                <label>Confirm Password</label>
+                <span id="cperror" class="error"></span>
+                <input type="text" placeholder="Confirm password..." id="cpass">
+            </div>
+
+            <div>
+                <label>E-mail</label>
+                <span id="merror" class="error"></span>
+                <input type="text" placeholder="Enter the e-mail..." id="mail">
+            </div>
+
+            <div>
+                <label>Mobile Number</label>
+                <span id="nerror" class="error"></span>
+                <input type="text" placeholder="Enter the mobile number..." id="num">
+            </div>
+
+            <div id="button">
+                <button type="submit">Register</button>
+                <button type="reset">Cancel</button>
+            </div>
+
+            <div id="login">
+                <p>Already have an account?
+                    <a href="../Login/login.html">Login</a>
+                </p>
+            </div>
+        </form>
     </div>
-
-
 
     <script src="../Registration/register.js"></script>
 </body>
+
 
 </html>

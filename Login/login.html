@@ -9,34 +9,50 @@
 </head>
 
 <body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">StudentDash</span>
+        </div>
+
+        <div class="nav-right">
+            <a href="../Registration/register.html" class="nav-btn">Register</a>
+        </div>
+    </header>
+
     <form action="" id="login-form">
         <h1>Login Form</h1>
+
         <div>
             <div>
-                <label for="">Username</label>
+                <label>Username</label>
                 <span id="uerror" class="error"></span>
             </div>
-            <input type="text" placeholder="enter the username" id="user">
-
+            <input type="text" placeholder="Enter the username" id="user">
         </div>
+
         <div>
             <div>
-                <label for="">Password</label>
+                <label>Password</label>
                 <span id="perror" class="error"></span>
             </div>
-            <input type="text" placeholder="enter the password" id="pass">
+            <input type="text" placeholder="Enter the password" id="pass">
         </div>
+
         <div id="buttons">
             <button id="login-button">Login</button>
-            <button id="cancel-button">Cancel</button>
+            <button id="cancel-button" type="reset">Cancel</button>
         </div>
+
         <div id="register-link">
-            <p>Don't have an account?<a href="../Registration/register.html">Register</a></p>
+            <p>Don't have an account?
+                <a href="../Registration/register.html">Register</a>
+            </p>
         </div>
     </form>
 
-
     <script src="../Login/login.js"></script>
 </body>
+
 
 </html>
